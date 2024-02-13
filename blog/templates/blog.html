@@ -13,17 +13,17 @@
 </style>
 <body>
 
-    <h1>{{name}}</h1>
+    {% extends 'index.html' %}
 
-    <div class="container">
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'blog' %}">Blog</a></li>
-            <li><a href="{% url 'kontak' %}">Contact</a></li>
+   
+{% block content %}
+<main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus assumenda iure suscipit, itaque adipisci
+    impedit nesciunt labore laudantium dolorem ipsa!</p>
+</main>
+{% endblock %}
 
-        </ul>
-    </div>
-
-    
+<footer>    
+</footer>
 </body>
 </html>
