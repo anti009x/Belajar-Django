@@ -20,14 +20,20 @@ from django.urls import path
 from about import views
 from blog import views as Blog
 from contact import views as Kontak
+from autentikasi import views as LoginViews
+from autentikasi import views as LogoutViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path ('',views.index,name="index"),
+    path ('dashboard/',views.index,name="index"),
     
     path('blog/',Blog.blog,name="blog"),
     
     path ('kontak/',Kontak.kontak,name="kontak"),
+    
+    path ('',LoginViews.login_view,name="login"),
+    
+    path ('logout/',LogoutViews.logoutview,name="logout")
     
     ]
