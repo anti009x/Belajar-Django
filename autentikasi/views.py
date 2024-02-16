@@ -4,7 +4,10 @@ from django.shortcuts import redirect
 from .forms import FormLogin
 from django.views.decorators.csrf import requires_csrf_token
 from django.contrib import messages
+# from django.conf import settings
+# from django.contrib.auth.decorators import login_required
 
+# @login_required(login_url=settings.LOGIN_URL)
 @requires_csrf_token
 def login_view(request):
     form = FormLogin(request.POST or None)
@@ -21,6 +24,7 @@ def login_view(request):
             return render(request, 'login.html', {'form': form})
     return render(request, 'login.html', {'form': form})
 
+# @login_required(login_url=settings.LOGIN_URL)
 def logoutview(request):
     logout(request)
     request.session.flush()

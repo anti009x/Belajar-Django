@@ -26,14 +26,14 @@ from autentikasi import views as LogoutViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     
+
     path ('dashboard/',views.index,name="index"),
-    
     path('blog/',Blog.blog,name="blog"),
     
     path ('kontak/',Kontak.kontak,name="kontak"),
     
     path ('',LoginViews.login_view,name="login"),
     
-    path ('logout/',LogoutViews.logoutview,name="logout")
+    path ('dashboard/logout/',LogoutViews.logoutview,name="logout")
     
     ]
