@@ -22,10 +22,12 @@ from blog import views as Blog
 from contact import views as Kontak
 from autentikasi import views as LoginViews
 from autentikasi import views as LogoutViews
+from adminmodule import views as AdminViews
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path ('adminview/',AdminViews.adminview,name="adminview"),
 
     path ('dashboard/',views.index,name="index"),
     path('blog/',Blog.blog,name="blog"),

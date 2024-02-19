@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'blog',
     'website',
     'contact',
-   'autentikasi'
+   'autentikasi',
+   'adminmodule'
+   
 ]
 
 MIDDLEWARE = [
