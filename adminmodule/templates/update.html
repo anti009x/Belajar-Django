@@ -25,7 +25,7 @@
         {% if messages %}
         {% for message in messages %}
         <script>
-            window.alert("{{message}}");
+            window.alert("data terkirim");
         </script>
         {% endfor %}
         {% endif %}
@@ -54,7 +54,7 @@
       <table class="table table-striped ">
         <thead>
           <tr>
-            {% comment %} <th scope="col">ID</th> {% endcomment %}
+            <th scope="col">ID</th>
             <th scope="col">NAMA TOKO</th>
             <th scope="col">PEMILIK TOKO</th>
             <th scope="col">TAHUN TOKO BERDIRI</th>
@@ -66,7 +66,7 @@
         <tbody >
           {% for i in data %}
           <tr>
-            {% comment %} <td>{{i.id}}</td> {% endcomment %}
+            <td>{{i.id}}</td>
             <td>{{ i.nama_toko }}</td>
             <td>{{ i.pemilik }}</td>
             <td>{{ i.tahun_berdiri }}</td>

@@ -25,9 +25,13 @@ from autentikasi import views as LogoutViews
 from adminmodule import views as AdminViews
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('adminview/',AdminViews.adminview,name="adminview"),
+    path('insert-data/', AdminViews.insertData, name="insert_data"),
+    path('update/<int:id>/', AdminViews.UpdateData),
+    path('delete/<id>', AdminViews.DeleteData),
 
     path ('dashboard/',views.index,name="index"),
     path('blog/',Blog.blog,name="blog"),

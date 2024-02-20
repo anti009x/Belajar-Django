@@ -28,4 +28,5 @@ def login_view(request):
 def logoutview(request):
     logout(request)
     request.session.flush()
+    
     return render(request, 'logout.html')
